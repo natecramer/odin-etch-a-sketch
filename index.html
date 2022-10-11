@@ -11,6 +11,12 @@
 <body>
     Etch-a-sketch
     <button id="generateGridBtn">Generate grid</button>
-  <div id="theGrid"></div>  
+    <label for="drawStyle">Draw style:</label>
+    <select id="drawStyle" onchange="setDrawStyle()">
+      <option value="yellow">Yellow</option>
+      <option value="random">Random</option>
+      <option value="fade">Fade to black</option>
+    </select>
+  <div id="theGrid"></div>
 </body>
 </html>

@@ -1,24 +1,23 @@
 #theGrid {
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    flex: 0 1 auto
+    display: grid;
+    width: 640px;
+    height: 640px;
+    background-color: darkslategray;
+    /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .cell {
     display: flex;
     border: 1px;
     border-style: solid;
-    width: 32px;
-    height: 32px;
+    border-color: black;
 }
 
 .row {
     display: flexbox;
-    border: 0;
+    border: 1px;
     border-color: green;
     border-style: solid;
-
 }
 
 .cellHover {

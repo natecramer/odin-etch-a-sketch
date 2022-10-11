@@ -23,7 +23,7 @@ function generateGrid(size) {
         let cell = document.createElement('div');
         cell.classList.add('cell');
         cell.addEventListener('mouseover', fillCell);
-        cell.style['background-color'] = 'darkslategray'
+        cell.style['background-color'] = 'darkslategray';
 
         theGrid.appendChild(cell);
     }    
@@ -51,6 +51,7 @@ gridButton.addEventListener('click', () => {
 
 // select draw style
 let drawStyleSelect = document.querySelector('#drawStyle');
+drawStyleSelect.addEventListener('change', setDrawStyle);
 let drawStyle = 'yellow';
 function setDrawStyle() {
     drawStyle = drawStyleSelect.value;
@@ -71,7 +72,7 @@ function fillCell() {
         case 'fade':
             bgColor = '';
             bgColor = window.getComputedStyle(this, null).getPropertyValue('background-color');
-            
+
             // extract rgb from bgColor
             const re = /.*?\(([0-9]*?), ([0-9]*?), ([0-9]*?)\)/;
             rgba = bgColor.match(re);
